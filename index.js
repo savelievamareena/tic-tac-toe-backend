@@ -1,5 +1,6 @@
-import http from 'http'
-import url from 'url'
+import http from 'http';
+import url from 'url';
+
 import init from "./actions/init.js";
 import handleMove from "./actions/handleMove.js";
 
