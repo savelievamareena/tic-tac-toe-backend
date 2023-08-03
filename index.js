@@ -3,6 +3,7 @@ import url from 'url';
 
 import init from "./actions/init.js";
 import handleMove from "./actions/handleMove.js";
+import getStat from "./actions/getStat.js";
 
 const port = 3030
 
@@ -29,6 +30,9 @@ const requestHandler = (request, response) => {
             break;
         case "/handlemove":
             handleMove(response, urlParts);
+            break;
+        case "/getStat":
+            getStat(response);
             break;
         default:
             response.statusCode = 404;
