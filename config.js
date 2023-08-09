@@ -1,3 +1,3 @@
 export default {
-    FIRST_PLAYER_ID: 1
+    FIRST_PLAYER_ID: 2
 }

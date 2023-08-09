@@ -1,6 +1,11 @@
 import diRepo from "../di.js"
+let config = diRepo.config;
+let db = diRepo.db;
 
-export default function(response, urlParts) {
-    let responseMessage = {activeUser: diRepo.calculateActiveUser()};
+export default function (response, urlParts) {
+    let responseMessage = {
+        firstPlayerId: config.FIRST_PLAYER_ID,
+        store: db.store
+    };
     response.end(JSON.stringify(responseMessage));
 }

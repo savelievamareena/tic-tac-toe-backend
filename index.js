@@ -4,6 +4,7 @@ import url from 'url';
 import init from "./actions/init.js";
 import handleMove from "./actions/handleMove.js";
 import getStat from "./actions/getStat.js";
+import refreshGame from "./actions/refreshGame.js";
 
 const port = 3030
 
@@ -28,11 +29,14 @@ const requestHandler = (request, response) => {
         case "/init":
             init(response, urlParts);
             break;
-        case "/handlemove":
+        case "/handle-move":
             handleMove(response, urlParts);
             break;
-        case "/getStat":
+        case "/get-stat":
             getStat(response);
+            break;
+        case "/refresh-game":
+            refreshGame(response)
             break;
         default:
             response.statusCode = 404;
